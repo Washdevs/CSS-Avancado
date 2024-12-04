@@ -5,10 +5,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        table caption {
+            caption-side: bottom;
+            font-size: 16px;
+            font-style: italic;
+            margin: 5px 0;
+            text-align: left;
+        }
+
+        table td,
+        table th {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+
+        tfoot td,
+        table th {
+            background-color: rgb(190, 190, 190);
+        }
+
+        .responsive-table {
+            max-width: 100%;
+            overflow-x: auto;
+        }
+    </style>
 </head>
 
 <body>
 
+    <div class="responsive-table">
+        <table>
+            <caption>Descrição da Tabela</caption>
+            <thead>
+                <tr>
+                    <th>Titulo 1</th>
+                    <th>Titulo 2</th>
+                    <th>Titulo 3</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Corpo 1</td>
+                    <td>Corpo 2</td>
+                    <td>Corpo 3</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Corpo 1</td>
+                    <td>Corpo 2</td>
+                </tr>
+                <tr>
+                    <td>Corpo 1</td>
+                    <td>Corpo 2</td>
+                    <td>Corpo 3</td>
+                </tr>
+            <tfoot>
+                <tr>
+                    <td colspan="2" rowspan="2"></td>
+                    <td>Total: </td>
+                </tr>
+                <tr>
+                    <td>Corpo3</td>
+                </tr>
+            </tfoot>
+            </tbody>
+
+        </table>
+    </div>
+
 </body>
 
 </html>
+<!-- "Colspan diz quantas colinas vai ocupar" e "Rowspan diz quantas linhas a td vai ocupar"-->
+<!-- "tfoot é footer da tabela com tr e td" e "thead é cabeçalho da tabela com tr e th que são as colunas"-->
+<!-- "tbody é o corpo da tabela o que fica no centro com tr e td"-->
+<!-- "Caption é a descição da tabela pode ser alinha ao bottom ou ao top também" com caption-side: ;-->
+<!-- border-collapse: collapse faz as colunas da tabela ficarem sem espaços entre elas -->
